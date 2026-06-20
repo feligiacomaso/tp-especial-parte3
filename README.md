@@ -55,7 +55,7 @@ Body:
 ```json
 {
     "email": "webadmin",
-    "password": "password"
+    "password": "admin"
 }
 ```
 
