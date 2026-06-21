@@ -71,7 +71,15 @@ POST /comentarios
 PUT /comentarios/:id
 ```
 
-
+### Ejemplo de que comentario agregar o modificar
+```json
+{
+        "autor": "profe",
+        "comentario": "ProbandoEjemplo",
+        "fecha": "2026-06-20",
+        "id_album": 2
+}
+```
 ## Observaciones
 
 Para probar los endpoints protegidos es necesario obtener previamente un token JWT mediante el endpoint de login y enviarlo en el encabezado:
