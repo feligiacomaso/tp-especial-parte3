@@ -2,7 +2,7 @@
 
 ## API REST de Comentarios de Álbumes
 
-##Integrantes
+## Integrantes
 Felicitas Giacomaso (feligiacomaso@gmail.com) Benjamin Herrera Randazzo (herrerabenjamin091@gmail.com)
 
 ## Descripción
