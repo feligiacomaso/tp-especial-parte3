@@ -1,81 +1,49 @@
-# TP Especial - Etapa 3
+<h1> Catálogo Musical </h1>
 
-## API REST de Comentarios de Álbumes
+<h2>Integrantes </h2> 
 
-## Integrantes
-Felicitas Giacomaso (feligiacomaso@gmail.com) Benjamin Herrera Randazzo (herrerabenjamin091@gmail.com)
+Felicitas Giacomaso (feligiacomaso@gmail.com)
+Benjamin Herrera Randazzo (herrerabenjamin091@gmail.com)
 
-## Descripción
+<h2>Tematica</h2>
 
-Este proyecto corresponde a la **Etapa 3 del Trabajo Práctico Especial** de Web 2. Se desarrolló una API RESTful para la gestión de comentarios asociados a álbumes musicales pertenecientes al catálogo musical implementado en etapas anteriores.
+Catálogo de música, álbumes de cada artista.
 
-La API permite consultar, crear y modificar comentarios realizados sobre los álbumes almacenados en la base de datos.
+<h2>Descripción</h2>
 
-## Endpoints
+Este sitio web permite mostrar distintos artistas con su información personal como fecha de nacimiento o nombre completo y una lista de sus álbumes con su fecha de lanzamiento y cantidad de canciones. El sistema incluye autenticación de usuarios para el inicio y cierre de sesión de administradores, permitiendo realizar operaciones de alta, baja y modificación de los datos tanto de los artistas como de los álbumes.
 
-### Obtener todos los comentarios
+---
 
-```http
-GET /comentarios
-```
+<h2>Instrucciones de instalación y despliegue</h2>
 
-### Obtener un comentario por ID
+1. Copiar la carpeta del proyecto en el directorio htdocs del servidor local Apache.
+2. Iniciar los servicios de Apache y MySQL.
+3. Acceder a phpMyAdmin y crear una base de datos vacía con el nombre catalogo_musical.
+4. Importar el archivo catalogo_musical.sql ubicado en la raíz del proyecto para cargar la estructura y los datos de prueba.
 
-```http
-GET /comentarios/:id
-```
+La conexión con la base de datos se realiza por defecto hacia el host localhost, con el usuario root y sin contraseña.
 
-### Filtrar comentarios por álbum
+---
 
-```http
-GET /comentarios?id_album={id}
-```
+ <h2>Acceso al sistema</h2>
 
-### Ordenar comentarios
+Para navegar la interfaz pública se debe ingresar en el navegador la dirección local del proyecto.
 
-```http
-GET /comentarios?sort=fecha&order=asc
-GET /comentarios?sort=fecha&order=desc
-```
+Para realizar operaciones de administración como alta, baja y modificación de datos, se debe ingresar al formulario de inicio de sesión mediante la ruta login_form.
 
-### Paginar resultados
+Las credenciales del usuario administrador para pruebas son las siguientes:
 
-```http
-GET /comentarios?page=1&limit=2
-```
-
-### Iniciar sesión
-
-```http
-POST /auth/login
-```
-
-Body:
-
-```json
-{
-    "email": "webadmin",
-    "password": "admin"
-}
-```
-
-### Crear comentario (requiere token JWT)
-
-```http
-POST /comentarios
-```
-
-### Modificar comentario (requiere token JWT)
-
-```http
-PUT /comentarios/:id
-```
+* Usuario: webadmin
+* Contraseña: admin
 
 
-## Observaciones
+---
 
-Para probar los endpoints protegidos es necesario obtener previamente un token JWT mediante el endpoint de login y enviarlo en el encabezado:
+<h2>Diagrama de entidad relación</h2>
 
-```http
-Authorization: Bearer <token>
-```
+El diagrama de entidad relación que detalla las tablas de artista, álbum y usuario se encuentra adjunto en la raíz del proyecto en formato de imagen.
+
+
+
+<img width="944" height="583" alt="Captura de pantalla 2026-05-23 215259" src="https://github.com/user-attachments/assets/a62b8a7b-aa59-4220-a228-ae0727b2476c" />
